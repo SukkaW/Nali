@@ -1,2 +1,0 @@
-#!/bin/sh
-ping $@ 2>&1|nali

@@ -1,2 +1,0 @@
-#!/bin/sh
-tracepath $@ 2>&1|nali
