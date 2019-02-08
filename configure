@@ -19,7 +19,7 @@ fi
 
 if test ! -f ./share/QQWry.Dat
 then
-    echo please download QQWry.Dat from https://github.com/meteoral/Nali/raw/master/share/QQWry.Dat 
+    echo please download QQWry.Dat from https://qqwry.mirror.noc.one/QQWry.Dat
     exit 1
 fi
 
@@ -77,7 +77,7 @@ EOF
 
 cat > bin/nali-update << EOF
 #!/bin/sh
-qqwry_dat_url="http://www.liuqingwei.com/ip/QQWry.Dat";
+qqwry_dat_url="https://qqwry.mirror.noc.one/QQWry.Dat";
 qqwry_dat_local_path="$datadir/QQWry.Dat"
 curl=\`which curl\`
 wget=\`which wget\`
@@ -101,7 +101,7 @@ then
 else
     echo Error: Please install curl or wget
     exit 1
-fi 
+fi
 echo Updating \$qqwry_dat_local_path
 \$command && mv /tmp/QQWry.Dat \$qqwry_dat_local_path && chmod 555 \$qqwry_dat_local_path && echo Successfully Updated && exit 0
 
