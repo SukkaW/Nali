@@ -5,9 +5,8 @@
 ```bash
 $ ./configure
 $ make
-# make install
+$ [sudo] make install
 ```
-
 
 ## Usage
 
