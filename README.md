@@ -1,16 +1,27 @@
-##编译安装方法
-------------
-	./configure  
-	make  
-	[sudo] make install  
+# Nali
+
+## Installation
+
+```bash
+$ ./configure
+$ make
+# make install
+```
 
 
-##使用方法
------------
-bash:~# nali **IP**  
-即可得到IP所在地区的信息  
-采用的纯真IP数据库  
-nali-update更新数据库  
-(<https://github.com/meteoral/IPUpdate> 此项目为自动更新纯真数据库)  
-nali-ping 直接ping域名对应IP的所在地区  
-版权归原作者<https://www.surfchen.org/nali>享有，仅在原有基础上进行优化
+## Usage
+
+```
+$ nali [IP] # Get IP Geolocation Informatiuon
+$ nali-update # Update QQWry.Dat From QQWry Mirror
+$ nali-ping
+$ nali-dig
+$ nali-traceroute
+$ nali-tracepath
+$ nali-dig
+$ nali-nslookup
+```
+
+## Copyright
+
+The original version of `Nali` was made by `<https://www.surfchen.org/nali>`, optimized by [Meteoral](http://liuqingwei.com/). What you are looking at now is a fork version of `Meteoral/Nali` modified by [SukkaW](https://skk.moe), who is maintaining a [qqwry-mirror](https://qqwry.mirror.noc.one) and add that mirror to `Nali`.
