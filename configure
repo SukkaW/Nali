@@ -10,6 +10,11 @@ echo ""
 exit 1
 fi
 
+if test ! -d ./bin
+then
+    mkdir -p ./bin
+fi
+
 if test ! -d ./libqqwry
 then
     echo there is no ./libqqwry
