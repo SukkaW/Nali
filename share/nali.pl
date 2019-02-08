@@ -27,5 +27,5 @@ sub qqwry {
     #    $addr=`qqwrynali $ip|$iconv -f GBK -t $lang`;
     #}
     $addr =~ s/\n//g;
-    return "$ip\[$addr\]";
+    return "$ip \[$addr\]";
 }
