@@ -114,6 +114,31 @@ echo Failed to update
 exit 1
 EOF
 
+cat > bin/nali-dig << EOF
+#!/bin/sh
+dig \$@ 2>&1|nali
+EOF
+
+cat > bin/nali-nslookup << EOF
+#!/bin/sh
+nslookup \$@ 2>&1|nali
+EOF
+
+cat > bin/nali-ping << EOF
+#!/bin/sh
+ping \$@ 2>&1|nali
+EOF
+
+cat > bin/nali-tracepath << EOF
+#!/bin/sh
+tracepath \$@ 2>&1|nali
+EOF
+
+cat > bin/nali-traceroute << EOF
+#!/bin/sh
+traceroute \$@ 2>&1|nali
+EOF
+
 echo '***** Configure Successfully *****'
 echo
 echo "Install:"
