@@ -84,6 +84,7 @@ cat > bin/nali-update << EOF
 #!/bin/sh
 qqwry_dat_url="https://qqwry.mirror.noc.one/QQWry.Dat";
 qqwry_dat_local_path="$datadir/QQWry.Dat"
+axel=\`which axel\`
 curl=\`which curl\`
 wget=\`which wget\`
 
@@ -97,10 +98,14 @@ if test -f /tmp/QQWry.Dat
 then
     rm -f /tmp/QQWry.Dat || exit 1
 fi
-if test "x\$wget" != "x" &&  test -x \$wget
+
+if test "x\$axel" != "x" &&  test -x \$axel
+then
+    command="\$axel -n8 \$qqwry_dat_url -o /tmp/QQWry.Dat"
+elif test "x\$wget" != "x" &&  test -x \$wget
 then
     command="\$wget --no-check-certificate \$qqwry_dat_url -O /tmp/QQWry.Dat"
-elif test "x\$curl" != "x" &&  test -x \$curl 
+elif test "x\$curl" != "x" &&  test -x \$curl
 then
     command="\$curl -k --compressed \$qqwry_dat_url -o /tmp/QQWry.Dat"
 else
