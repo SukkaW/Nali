@@ -1,3 +1,9 @@
+# Depracated
+
+# Please use [Nali CLI](https://nali.skk.moe) instead.
+
+-----
+
 # Nali
 
 ## Installation
